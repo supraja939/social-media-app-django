@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <style>
+.posts-grid{
+    display:grid;
+    grid-template-columns:repeat(3,200px);
+    justify-content:center;
+    gap:20px;
+    margin-top:30px;
+}
+
+.post-box{
+    width:200px;
+    border-radius:8px;
+    text-align:center;
+}
+
+.post-box img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.custom-navbar{
+    background-color:#0095f6;
+    padding:10px 20px;
+}
+
+.page-container{
+    max-width:900px;
+    margin:auto;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔵 Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark px-4 custom-navbar">
+    
+    <span class="navbar-brand fw-bold">Instagram Clone</span>
+
+    <div class="ms-auto d-flex gap-2">
+
+        <button class="btn btn-outline-light" onclick="goHome()">Home</button>
+        <button class="btn btn-outline-light" onclick="goCreate()">Create</button>
+        <button class="btn btn-outline-light" onclick="goPeople()">People</button>
+        <button class="btn btn-outline-light" onclick="goProfile()">Profile</button>
+        <button class="btn btn-light" onclick="logout()">Logout</button>
+
+    </div>
+</nav>
+<div class="page-container bg-white p-4 rounded shadow-sm">
+
+    <div class="row align-items-center">
+
+        <div class="col-md-4 text-center">
+            <img id="profileImage"
+                 src="https://via.placeholder.com/150"
+                 class="rounded-circle"
+                 width="150"
+                 height="150">
+        </div>
+
+        <div class="col-md-8">
+
+            <div class="d-flex align-items-center mb-3">
+                <h3 id="username" class="me-3"></h3>
+                <button class="btn btn-outline-secondary btn-sm" onclick="goEditProfile()">
+                    Edit Profile
+                </button>
+            </div>
+
+            <div class="mb-3">
+                <strong id="postCount">0</strong> posts
+                <strong id="followersCount" class="ms-4">0</strong> followers
+                <strong id="followingCount" class="ms-4">0</strong> following
+            </div>
+
+            <p id="bio" class="text-muted"></p>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- 🔴 My Posts Section -->
+<h4 class="mt-4">My Posts</h4>
+
+<div id="myPosts" class="posts-grid">
+</div>
+<script src="../js/main.js"></script>
+<script src="../js/profile.js"></script>
+</body>
+</html>

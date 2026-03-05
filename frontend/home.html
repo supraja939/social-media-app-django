@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .custom-navbar {
+        background-color: #0095f6;
+    }
+
+    .page-container {
+        max-width: 900px;
+        margin: auto;
+        margin-top: 40px;
+    }
+
+    /* NEW: square post image */
+    .post-image{
+        width:100%;
+        aspect-ratio:1/1;
+        object-fit:cover;
+    }
+
+    .card{
+        max-width:500px;
+        margin:auto;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- 🔵 Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark px-4 custom-navbar">
+    
+    <span class="navbar-brand fw-bold">Instagram Clone</span>
+
+    <div class="ms-auto d-flex gap-2">
+
+        <button class="btn btn-outline-light" onclick="goHome()">Home</button>
+        <button class="btn btn-outline-light" onclick="goCreate()">Create</button>
+        <button class="btn btn-outline-light" onclick="goPeople()">People</button>
+        <button class="btn btn-outline-light" onclick="goProfile()">Profile</button>
+        <button class="btn btn-light" onclick="logout()">Logout</button>
+    </div>
+</nav>
+<div class="page-container text-center">
+    <h3 class="mb-4">All Posts</h3>
+    <div id="postsContainer">
+        <!-- Posts will load here -->
+    </div>
+</div>
+
+<script src="../js/main.js"></script>
+<script src="../js/home.js"></script>
+</body>
+</html>

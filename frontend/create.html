@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .custom-navbar {
+            background-color: #0095f6;
+        }
+
+        .page-container {
+            max-width: 900px;
+            margin: auto;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 🔵 Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark px-4 custom-navbar">
+    
+    <span class="navbar-brand fw-bold">Instagram Clone</span>
+
+    <div class="ms-auto d-flex gap-2">
+
+        <button class="btn btn-outline-light" onclick="goHome()">Home</button>
+        <button class="btn btn-outline-light" onclick="goCreate()">Create</button>
+        <button class="btn btn-outline-light" onclick="goPeople()">People</button>
+        <button class="btn btn-outline-light" onclick="goProfile()">Profile</button>
+        <button class="btn btn-light" onclick="logout()">Logout</button>
+
+    </div>
+</nav>
+<div class="page-container bg-white p-4 rounded shadow-sm">
+
+    <h4>Create Post</h4>
+
+    <div class="mb-3">
+        <input type="file" id="imageInput" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <textarea id="captionInput" class="form-control" placeholder="Write a caption..."></textarea>
+    </div>
+
+    <button class="btn btn-primary" onclick="createPost()">Post</button>
+
+</div>
+<script src="../js/main.js"></script>
+<script src="../js/create.js"></script>
+</body>
+</html>
